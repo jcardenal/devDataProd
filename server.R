@@ -1,10 +1,13 @@
 library(shiny)
-# following loads variables
+# following allows access to variables
 # mtcars : base data
 # fit : GLM model from mtcars
 # t : variable to predict mpg for
 library(caret)
-load("model.RData")
+library(datasets)
+data(mtcars)
+fit  <- train(mtcars$mpg ~ ., data=mtcars, method="glm")
+t <- mtcars[1,]
 
 # build comparison table
 # ordering for mpg
