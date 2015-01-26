@@ -1,0 +1,39 @@
+Developing Data Products: Course Project
+========================================================
+author: Jesús Cardenal
+date: 25/01/2015
+
+Overview
+=============
+
+This presentation corresponds to the application deployed at http://jcardenal.shinyapps.io/devDataProd
+
+This application allows to predict the MPG (miles per gallon) from a set of parameters of a car. The prediction model uses a GLM (Generalized Linear Model), built from the dataset __mtcars__
+
+The prediction model
+========================================================
+
+The prediction model has been built using all the available data of the **mtcars** dataset. It is not the most ortodox way of preparing a prediction model, but it is enough for the purpose of this project.
+
+For a complete treatment of the subject, you are recommended to take the **Machine Learning** course at https://www.coursera.org/course/predmachlearn
+
+That course would teach you, for example, that the dataset should be partitioned to use one part as the training data for the model and the rest of the original dataset to be used to probe how good the model built from that data is.
+
+Next Steps
+========================================================
+
+From this initial version of the application, some ideas could be considered to improve the project; for example:
+
+- I18N and localizacion of units (gallons/miles - litters/Km.,...)
+- A better prediction model could be built with more data available
+- More graphic information could be added to display how the characteristics of the model fits in the overall dataset considered
+
+Example
+========================================================
+
+Adding graphical information could allow adding the location of the car being predicted in the plot, so it can be easily compared to the overall dataset. Maybe in a plot as the following:
+
+```{r, echo=FALSE, }
+plot(cars)
+```
+
